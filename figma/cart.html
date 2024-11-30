@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="figma.css">
+</head>
+
+<body>
+    <header class=" flex items-center justify-between md:py-[1.875rem] md:px-[3.375rem] px-[1rem] ">
+        <div>
+            <img class="item text-center justify-center h-[4rem] w-[6rem] md:w-[9.875rem] md:h-[2.56rem]"
+                src="image/Frame 168.svg" alt="">
+        </div>
+        <div>
+
+            <ul class="md:flex hidden">
+                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="home.html"
+                        class="cursor-pointer">Home</a></li>
+                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="shop.html"
+                        class="cursor-pointer">Shop</a></li>
+                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="cart.html"
+                        class="cursor-pointer">About</a></li>
+                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="contact.html"
+                        class="cursor-pointer">Contact</a></li>
+        </div>
+        </ul>
+        <div class="flex gap-2 md:gap-[1.40rem]">
+            <div class=""> <img src="icons and logo/user.png" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/search.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/heart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/cart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+        </div>
+    </header>
+    <section class="h-[19.75rem] bg-cover bg-[url('image/sa.png')] flex flex-col justify-center items-center py-16 px-4">
+        <div class="flex flex-col items-center pt-10">
+            <img class="w-[77px] h-[77px]" src="icons and logo/main.png" alt="Cart Icon">
+            <h1 class="text-[#000000] font-medium text-3xl sm:text-4xl md:text-5xl mt-4">Cart</h1>
+        </div>
+    
+        <ul class="flex justify-center items-center mt-4">
+            <li class="font-medium text-[16px] text-[#000000]">Home</li>
+            <i class="bx bx-chevron-right w-[14px] h-[8px] text-[#000000] mx-2"></i>
+            <li class="font-light text-[16px] text-[#000000]">Cart</li>
+        </ul>
+    </section>
+    
+    <div class="h-[525px] w-full sm:w-[1440px] relative">
+        <div class="w-full sm:w-[817px] h-[215px] sm:ml-[100px] sm:mt-[72px]">
+            <div class="w-full sm:w-[817px] h-[55px] bg-[#F9F1E7]">
+                <ul class="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start">
+                    <li class="ml-0 sm:ml-[142px] pt-[15px] pb-[16px] font-medium text-[16px] text-[#000000]">Product</li>
+                    <li class="ml-0 sm:ml-[114px] pt-[15px] pb-[16px] font-medium text-[16px] text-[#000000]">Price</li>
+                    <li class="ml-0 sm:ml-[137px] pt-[15px] pb-[16px] font-medium text-[16px] text-[#000000]">Quantity</li>
+                    <li class="ml-0 sm:ml-[36px] pt-[15px] pb-[16px] font-medium text-[16px] text-[#000000]">Subtotal</li>
+                </ul>
+            </div>
+    
+            <div class="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start mt-[55px] sm:mt-[95px]">
+                <img class="w-[108px] h-[105px]" src="image/Group 146.png" alt="Product Image">
+                <div class="flex flex-wrap sm:flex-nowrap justify-center items-center ml-0 sm:ml-[20px] mt-4 sm:mt-[95px]">
+                    <p class="text-[#9F9F9F] h-[24px] w-[108px]">Asgaard sofa</p>
+                    <p class="text-[#9F9F9F] h-[24px] w-[120px] sm:ml-[69px]">Rs. 250,000.00</p>
+                    <button class="h-[32px] w-[32px] bg-[#FFFFFF] border-solid border-2 rounded-[5px] border-[#9F9F9F] sm:ml-[69px]">1</button>
+                    <p class="h-[24px] w-[120px] sm:ml-[48px]">Rs. 250,000.00</p>
+                    <img class="h-[28px] w-[28px] sm:ml-[49px]" src="icons and logo/ant-design_delete-filled.png" alt="Delete Icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[390px] w-full sm:w-[393px] bg-[#F9F1E7] absolute top-0 right-0 sm:top-auto sm:right-0 sm:mt-0 sm:mr-[86px] sm:ml-[85px]">
+            <h1 class="font-semibold pt-[16px] pl-[48px] sm:pl-[96px] pr-[48px] sm:pr-[118px] text-2xl sm:text-3xl text-center sm:text-left">Cart Totals</h1>
+            <div class="mx-[20px] sm:mx-[75px] flex justify-between mt-[62px]">
+                <p class="font-medium">Subtotal</p>
+                <p class="text-[#9F9F9F]">Rs. 250,000.00</p>
+            </div>
+            <div class="mx-[20px] sm:mx-[75px] flex justify-between mt-[31px]">
+                <p class="font-medium">Total</p>
+                <p class="text-[#B88E2F]">Rs. 250,000.00</p>
+            </div>
+            <div class="flex justify-center sm:justify-start mt-[42px] mb-[80px] sm:mr-[86px] sm:ml-[85px]">
+                <button class="py-4 px-12 sm:py-6 sm:px-14 border-[0.0625rem] border-[#000000] rounded-2xl text-[#000000] font-normal">
+                    Check Out
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <section class=" h-[270px] mt-[85px] bg-[#FAF3EA] flex justify-around items-center px-[100px 0px] py-[100px 0px] ">
+        <div class="flex pt-[100px] pb-[100px] pr-[53px] pl-[53px]">
+            <img class="mr-[55.33px] h-[70px] w-[337px]" src="image/Frame 5.png">
+            <img class="mr-[55.33px] h-[70px] w-[328px]" src="image/Frame 19.png">
+            <img class="mr-[55.33px] h-[70px] w-[244px]" src="image/Frame 2.png">
+            <img class="mr-[55.33px] h-[70px] w-[259px]" src="image/Frame 4.png">
+        </div>
+    </section>
+    
+
+    <footer class="mt-12 w-full bg-white">
+        <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-wrap gap-y-8">
+
+            <div class="w-full sm:w-[48%] lg:w-[33%]">
+                <h1 class="font-bold text-lg md:text-xl mb-4">Funiro.</h1>
+                <p class="text-sm md:text-base text-[#9F9F9F]">
+                    400 University Drive Suite 200<br />
+                    Coral Gables, FL 33134 USA
+                </p>
+            </div>
+
+
+            <div class="w-full sm:w-[48%] lg:w-[16%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Links</h2>
+                <ul>
+                    <li class="text-black text-sm md:text-base mb-4">Home</li>
+                    <li class="text-black text-sm md:text-base mb-4">Shop</li>
+                    <li class="text-black text-sm md:text-base mb-4">About</li>
+                    <li class="text-black text-sm md:text-base">Contact</li>
+                </ul>
+            </div>
+
+
+            <div class="w-full sm:w-[48%] lg:w-[16%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Help</h2>
+                <ul>
+                    <li class="text-black text-sm md:text-base mb-4">Payment Options</li>
+                    <li class="text-black text-sm md:text-base mb-4">Returns</li>
+                    <li class="text-black text-sm md:text-base">Privacy Policies</li>
+                </ul>
+            </div>
+
+
+            <div class="w-full sm:w-[48%] lg:w-[33%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Newsletter</h2>
+                <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="w-full md:flex-1 px-4 py-2 border border-[#9F9F9F] rounded-md text-sm md:text-base text-[#9F9F9F] focus:outline-none" />
+                    <button
+                        class="px-6 py-2 bg-black text-white text-sm md:text-base rounded-md hover:bg-gray-800 transition">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="border-t border-gray-300 mx-4 md:mx-6 lg:mx-8">
+        <p class="text-center text-sm md:text-base text-black mt-6 mb-4">
+            © 2023 Funiro. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

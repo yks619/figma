@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="figma.css" />
+</head>
+
+<body>
+    <header class=" flex items-center justify-between md:py-[1.875rem] md:px-[3.375rem] px-[1rem] ">
+        <div>
+            <img class="item text-center justify-center h-[4rem] w-[6rem] md:w-[9.875rem] md:h-[2.56rem]" src="image/Frame 168.svg"  alt="">
+        </div>
+        <div>
+
+            <ul class="md:flex hidden">
+                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="home.html"
+                    class="cursor-pointer">Home</a></li>
+                    <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="shop.html"
+                        class="cursor-pointer">Shop</a></li>
+                        <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="cart.html"
+                            class="cursor-pointer">About</a></li>
+                            <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="contact.html"
+                                class="cursor-pointer">Contact</a></li>
+                            </div>
+        </ul>
+        <div class="flex gap-2 md:gap-[1.40rem]">
+            <div class=""> <img src="icons and logo/user.png" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/search.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/heart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+            <div class=""> <img src="icons and logo/cart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+        </div>
+    </header>
+    <section class="h-[19.75rem] bg-cover bg-[url('image/sa.png')] flex flex-col justify-center items-center py-16 px-4">
+
+        <h1 class="text-[#000000] font-bold text-3xl sm:text-4xl md:text-5xl text-center">
+            Shop
+        </h1>
+
+        <p class="text-base mt-2 text-[#000000] flex items-center justify-center">
+            Home
+            <i class="bx bx-chevron-right w-[16px] h-[16px] mx-2"></i>
+            Shop
+        </p>
+    </section>
+    
+    <section class="h-auto mt-[1px] bg-[#F9F1E7] py-4 px-4 lg:px-16">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+
+            <div class="flex items-center">
+                <img src="icons and logo/Vector.png" alt="Filter Icon" class="w-6 h-6">
+                <p class="text-[#000000] font-normal text-[16px] ml-2">Filter</p>
+                <img src="icons and logo/Vector (1).png" alt="Filter Dropdown Icon" class="w-6 h-6 ml-4">
+                <img src="icons and logo/bi_view-list.png" alt="List View Icon" class="w-6 h-6 ml-4">
+
+            <div class="flex items-center border-l-2 border-[#9F9F9F] pl-4">
+                <p class="text-[#000000] text-sm sm:text-base">Showing 1-16 of 32 results</p>
+            </div>
+
+            <div class="flex items-center">
+                <p class="text-sm sm:text-base">Show</p>
+                <button
+                    class="h-[40px] w-[55px] bg-[#FFFFFF] ml-4 text-base text-[#9F9F9F] flex items-center justify-center">
+                    16
+                </button>
+            </div>
+            <div class="flex items-center">
+                <p class="text-sm sm:text-base">Sort by</p>
+                <button
+                    class="h-[40px] w-auto bg-[#FFFFFF] ml-4 text-base text-[#9F9F9F] flex items-center justify-center px-4">
+                    Default
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp2.500.000 <s class="text-gray-500">3.500.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
+            </div>
+            <div
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/Group.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp2.500.000 <s class="text-gray-500">3.500.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto">
+            <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+    
+       
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp2.500.000 <s class="text-gray-500">3.500.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto">
+            <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+    
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp2.500.000 <s class="text-gray-500">3.500.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto">
+            <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+    
+        
+        <div class="w-full sm:w-[17.81rem] h-auto relative">
+            <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex justify-center gap-4 mt-10">
+        
+        <button class="h-[60px] w-[60px] bg-[#B88E2F] rounded-[10px] flex items-center justify-center text-white font-bold">
+            1
+        </button>
+        <button class="h-[60px] w-[60px] bg-[#F9F1E7] rounded-[10px] flex items-center justify-center text-[#B88E2F] font-bold">
+            2
+        </button>
+        <button class="h-[60px] w-[60px] bg-[#F9F1E7] rounded-[10px] flex items-center justify-center text-[#B88E2F] font-bold">
+            3
+        </button>
+        <button
+            class="h-[60px] w-[98px] bg-[#F9F1E7] rounded-[10px] flex items-center justify-center text-[#B88E2F] font-bold">
+            Next
+        </button>
+    </div>
+    
+    <section class="h-auto mt-20 bg-[#FAF3EA] px-4 py-10 sm:py-16">
+        <div class="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10">
+            <img class="h-[70px] max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[337px]"
+                src="image/Frame 5.png" alt="Logo 1" />
+
+            <img class="h-[70px] max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[328px]"
+                src="image/Frame 19.png" alt="Logo 2" />
+
+            <img class="h-[70px] max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[244px]"
+                src="image/Frame 2.png" alt="Logo 3" />
+
+            <img class="h-[70px] max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[259px]"
+                src="image/Frame 4.png" alt="Logo 4" />
+        </div>
+    </section>
+
+    <footer class="mt-12 w-full bg-white">
+        <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-wrap gap-y-8">
+            <div class="w-full sm:w-[48%] lg:w-[33%]">
+                <h1 class="font-bold text-lg md:text-xl mb-4">Funiro.</h1>
+                <p class="text-sm md:text-base text-[#9F9F9F]">
+                    400 University Drive Suite 200<br />
+                    Coral Gables, FL 33134 USA
+                </p>
+            </div>
+
+            <div class="w-full sm:w-[48%] lg:w-[16%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Links</h2>
+                <ul>
+                    <li class="text-black text-sm md:text-base mb-4">Home</li>
+                    <li class="text-black text-sm md:text-base mb-4">Shop</li>
+                    <li class="text-black text-sm md:text-base mb-4">About</li>
+                    <li class="text-black text-sm md:text-base">Contact</li>
+                </ul>
+            </div>
+
+            <div class="w-full sm:w-[48%] lg:w-[16%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Help</h2>
+                <ul>
+                    <li class="text-black text-sm md:text-base mb-4">
+                        Payment Options
+                    </li>
+                    <li class="text-black text-sm md:text-base mb-4">Returns</li>
+                    <li class="text-black text-sm md:text-base">Privacy Policies</li>
+                </ul>
+            </div>
+
+            <div class="w-full sm:w-[48%] lg:w-[33%]">
+                <h2 class="font-medium text-base text-[#9F9F9F] mb-6">Newsletter</h2>
+                <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="w-full md:flex-1 px-4 py-2 border border-[#9F9F9F] rounded-md text-sm md:text-base text-[#9F9F9F] focus:outline-none" />
+                    <button
+                        class="px-6 py-2 bg-black text-white text-sm md:text-base rounded-md hover:bg-gray-800 transition">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-t border-gray-300 mx-4 md:mx-6 lg:mx-8" />
+        <p class="text-center text-sm md:text-base text-black mt-6 mb-4">
+            © 2023 Funiro. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
