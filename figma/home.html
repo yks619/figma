@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="figma.css">
 
 </head>
 
-<body class="m-0 p-0">
-    <header class=" flex items-center justify-between md:py-[1.875rem] md:px-[3.375rem] px-[1rem] ">
-        <div>
-            <img class="item text-center justify-center h-[4rem] w-[6rem] md:w-[9.875rem] md:h-[2.56rem]" src="image/Frame 168.svg"  alt="">
-        </div>
-        <div>
+<body class="">
+    <header class="flex flex-wrap items-center justify-between py-6 px-6 lg:py-[1.875rem] lg:px-[3.375rem] bg-white fixed t-0 l-0 w-full overflow-hidden z-50">
 
-            <ul class="md:flex hidden">
-                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="home.html"
-                    class="cursor-pointer">Home</a></li>
-                    <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="shop.html"
-                        class="cursor-pointer">Shop</a></li>
-                        <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="cart.html"
-                            class="cursor-pointer">About</a></li>
-                            <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="contact.html"
-                                class="cursor-pointer">Contact</a></li>
-                            </div>
+        <img src="image/Frame 168.svg" alt="Logo" class="h-[40px] lg:h-[50px]">
+    
+        <ul class="hidden lg:flex space-x-[3.344rem]">
+            <li><a href="home.html" class="cursor-pointer hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="cursor-pointer hover:text-gray-600">Shop</a></li>
+            <li><a href="checkout.html" class="cursor-pointer hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="cursor-pointer hover:text-gray-600">Contact</a></li>
         </ul>
-        <div class="flex gap-2 md:gap-[1.40rem]">
-            <div class=""> <img src="icons and logo/user.png" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/search.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/heart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/cart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+        <div class="flex items-center space-x-6">
+            <div>
+                <img src="./icons and logo/user.png" alt="Account" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/search.png" alt="Search" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/heart.svg" alt="Favorites" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/cart.png" alt="Cart" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
         </div>
+    
+        <button class="lg:hidden block text-gray-600" id="menu-toggle">
+            <i class="ri-menu-2-line"></i>
+        </button>
+    
+        <ul class="hidden flex-col space-y-4 mt-4 w-full lg:hidden bg-white py-4 px-6 border-t border-gray-200"
+            id="mobile-menu">
+            <li><a href="home.html" class="block text-gray-800 hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="block text-gray-800 hover:text-gray-600">Shop</a></li>
+            <li><a href="single.html" class="block text-gray-800 hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="block text-gray-800 hover:text-gray-600">Contact</a></li>
+        </ul>
     </header>
 
     <section class="flex justify-end bg-cover bg-[url('image/bg.png')]">
@@ -80,158 +94,281 @@
     <nav class="mt-[3.5rem] flex justify-center items-center">
         <h1 class="font-bold text-[2.5rem] text-[#3A3A3A]">Our Products</h1>
     </nav>
-    <div class=" md:flex flex-wrap justify-center items-center mt-[2rem] my-[6.375rem] ">
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
 
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#E97171] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">-30%</p>
-            </div>
-            <img src="image/1.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[1.25rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Syltherine</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]">Stylish cafe chair</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 2.500.000
-                    <s class="text-base text-[#B0B0B0] font-normal">3.500.000</s>
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp2.500.000 <s class="text-gray-500">3.500.000</s>
                 </p>
             </div>
-        </div>
-        <div class="mx-[2rem] my-[2rem] w-[17.81rem] h-[27.875] relative group">
-            <img src="image/Images (5).png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                <b class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">leviosa</b>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]"> Stylish cafe chair</p>
-                <p class="mt-[0.5rem] text-[20px] font-semibold text-[#3A3A3A]">Rp 2.500.000</p>
-            </div>
             <div
-                class="opacity-0 group-hover:opacity-100  bg-[rgba(58,58,58,0.5)] absolute top-0 right-0 left-0 bottom-0 flex flex-col justify-center items-center ">
-
-                <button
-                    class="w-[202px] h-[48px]  bg-[#FFFFFF] text-[#B88E2F] font-semibold text-[1rem] items-center justify-center">Add
-                    to Card</button>
-
-                <div class=" flex items-center justify-between]">
-                    <div class="flex mr-[20px]  mt-[24px]">
-                        <img class="h-[16px] w-[16px]" src="icons and logo/gridicons_share.png" alt="">
-                        <span class="ml-[2px] font-semibold text-base text-white">Compare</span>
-                    </div>
-                    <div class="flex ml-[2px]  mt-[24px]">
-                        <img class="h-[16px] w-[16px]" src="icons and logo/Group.png" alt="">
-                        <span class="ml-[2px] font-semibold text-base text-white">Share</span>
-                    </div>
-                    <div class="flex ml-[20px]  mt-[24px]">
-                        <img class="h-[16px] w-[16px]" src="icons and logo/heart.png" alt="">
-                        <span class="ml-[2px] font-semibold text-base text-white">Like</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#E97171] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">-50%</p>
-            </div>
-            <img src="image/./image 3.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Lolito</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]"> Luxury big sofa</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 7.000.000 <s
-                        class="text-base text-[#B0B0B0] font-normal">Rp 14.000.000</s></p>
-            </div>
-        </div>
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875rem]">
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#2EC1AC] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">New</p>
-            </div>
-            <img src="image/./image 4.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[2.8125rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Respiro</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]">Outdoor bar table and stool</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 500.000</p>
-            </div>
-        </div>
-    </div>
-    <div class=" md:flex flex-wrap justify-center items-center mt-[2rem] my-[6.375rem] ">
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
-            <img src="image/5.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[1.25rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Grifo</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]">Night lamp</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 1.500.000 </p>
-            </div>
-        </div>
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#2EC1AC] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">New</p>
-            </div>
-            <img src="image/6.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Muggo</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]">Small mug</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 1.500.000</p>
-            </div>
-        </div>
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875rem]">
-
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#E97171] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">-50%</p>
-            </div><img src="image/7.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Pingky</p>
-                <p class="mt-[0.5rem text-base font-medium text-[#898989]">Cute bed set</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 7.000.000 <s
-                        class="text-base text-[#B0B0B0] font-normal">Rp 14.000.000</s></p>
-            </div>
-        </div>
-        <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
-            <div
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#2EC1AC] mr-[1.5rem] mt-[1.5rem] ml-[213px] mt-[172px rounded-[50%] absolute">
-                <p class="text-[#FFFFFF] font-medium text-base">New</p>
-            </div>
-            <img src="image/image 8.png">
-            <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[2.8125rem]">
-                <p class="mt-[1rem] text-2xl font-semibold text-[#3A3A3A]">Potty</p>
-                <p class="mt-[0.5rem] text-base font-medium text-[#898989]">Minimalist flower pot</p>
-                <p class="mt-[0.5rem] text-xl font-semibold text-[#3A3A3A]">Rp 500.000</p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="flex justify-center items-center mt-8 mb-16 mx-auto sm:mt-10 sm:mb-20">
-        <button
-            class="h-12 w-60 sm:w-72 md:w-80 border border-[#B88E2F] bg-white text-[#B88E2F] font-bold hover:bg-[#B88E2F] hover:text-white transition">
-            Show More
-        </button>
-    </div>
-
-
-
-    <div class="h-[41.87rem] w-full  bg-[#FCF8F3]">
-        <div class=" flex w-[74.75rem] h-[34.75rem] absolute justify-center items-center mx-[122px] mt-[56px] ">
-            <div class="w-[404px] h-[486px] relative ">
-                <p class="absolute flex text-white font-semibold text-xl mt-[355px] ml-[14px]"> Explore more</p>
-                <div
-                    class="items-center justify-between bg-[#FFFFFF] opacity-50 h-[108px] w-[217px] ml-[24px] mt-[357px] mb-[20px] mr-[163px] absolute">
-                    <ul class="flex justify-center items-center ml-[32px] mr-[43px] mt-[26.72px]">
-                        <li class=" font-medium text-[16px] text-[#616161]">01</li>
-                        <li class=" font-medium text-[16px] text-[#616161]">-</li>
-                        <li class=" font-medium text-[16px] text-[#616161]">Bed Room</li>
-                    </ul>
-                    <ul class="mb-[26.72px] ml-[32px] mt-[3px] mr-[17px]">
-                        <li class="text-[#3A3A3A] font-semibold text-[28px] ">Inner Peace</li>
-                    </ul>
-                </div>
-                <img class="" src="image/Rectangle 24.png">
-            </div>
-            <img class=" ml-[24px] relative" src="image/Rectangle 25 (1).png">
+            class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
             <button
-                class="flex justify-center items-center h-[3rem] w-[3rem] bg-[#FFFFFF] ml-[345px] mt-[267px] mb-[171px] mr-[-50px] rounded-[50%] absolute"><img
-                    src="icons and logo/Line.png" alt=""></button>
-            <img class=" ml-[24px]" src="image/Rectangle 26 (1).png">
+                class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                Add to Cart
+            </button>
+            <div class="flex justify-around mt-6 w-full px-6">
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/Group.png" alt="Group Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                </div>
+            </div>
+        </div>
+            
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
+            </div>
+            <div
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+            class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+            <button
+                class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                Add to Cart
+            </button>
+            <div class="flex justify-around mt-6 w-full px-6">
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                </div>
+            </div>
+        </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="./image/5.png" alt="Syltherine Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Grifo</b>
+                <p class="text-sm lg:text-base mt-2">Night lamp</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp1.500.000
+                </p>
+            </div>
+            <div
+            class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+            <button
+                class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                Add to Cart
+            </button>
+            <div class="flex justify-around mt-6 w-full px-6">
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                </div>
+            </div>
+        </div>
+            
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/6.png" alt="Leviosa Chair" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Muga</b>
+                <p class="text-sm lg:text-base mt-2">Small mug</p>
+                <p class="text-sm lg:text-base mt-2">Rp150.000</p>
+            </div>
+            <div
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/7.png" alt="Lolito Sofa" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2">Pingky</b>
+                <p class="text-sm lg:text-base mt-2">cute bed set</p>
+                <p class="text-sm lg:text-base mt-2">
+                    Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                </p>
+            </div>
+            <div
+            class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+            <button
+                class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                Add to Cart
+            </button>
+            <div class="flex justify-around mt-6 w-full px-6">
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                    <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                </div>
+            </div>
+        </div>
+            <div
+                class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                -30%
+            </div>
+        </div>
+        <div class="w-full sm:w-[17.81rem] h-auto relative group">
+            <img src="image/image 8.png" alt="Respiro Table" class="w-full h-auto">
+            <div class="bg-[#F4F5F7] p-4">
+                <b class="block text-lg lg:text-xl mt-2 font-semibold">Potty</b>
+                <p class="text-sm lg:text-base mt-2">Minimalist flower pot</p>
+                <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+            </div>
+            <div
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                New
+            </div>
         </div>
     </div>
 
@@ -341,6 +478,14 @@
             }
         }
     }
+    
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
 </script>
 
 </html>

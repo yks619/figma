@@ -7,142 +7,179 @@
     <title>single product</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
     <link rel="stylesheet" href="figma.css">
 </head>
 
 <body>
-    <header class=" flex items-center justify-between md:py-[1.875rem] md:px-[3.375rem] px-[1rem] ">
-        <div>
-            <img class="item text-center justify-center h-[4rem] w-[6rem] md:w-[9.875rem] md:h-[2.56rem]" src="image/Frame 168.svg"  alt="">
-        </div>
-        <div>
+    <header class="flex flex-wrap items-center justify-between py-6 px-6 lg:py-[1.875rem] lg:px-[3.375rem] bg-white fixed t-0 l-0 w-full overflow-hidden z-50">
 
-            <ul class="md:flex hidden">
-                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="home.html"
-                    class="cursor-pointer">Home</a></li>
-                    <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="shop.html"
-                        class="cursor-pointer">Shop</a></li>
-                        <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="cart.html"
-                            class="cursor-pointer">About</a></li>
-                            <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="contact.html"
-                                class="cursor-pointer">Contact</a></li>
-                            </div>
-        </ul>
-        <div class="flex gap-2 md:gap-[1.40rem]">
-            <div class=""> <img src="icons and logo/user.png" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/search.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/heart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/cart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-        </div>
-    </header>
-    <nav class=" h-[6.25rem] bg-[#F9F1E7] mt-[14px] flex">
-        <p class="text-base pt-[38px] pl-[99px] text-[#000000] flex">home <i
-                class='bx bx-chevron-right w-[20px] h-[30px] font-semibold text-xl flex justify-center items-center mr-[24px]'></i>
-            shop <i
-                class='bx bx-chevron-right w-[20px] h-[30px] font-semibold text-xl flex justify-center items-center mr-[25px]'>
-            </i></p>
-        <div class=" mt-[31px] mb-[32px] ml-[25px] border-l-2 border-[#9F9F9F] pl-[34px] pt-[6px] b-[7px]">
-            <p class="text-[#000000] ">Showing 1-16 of 32 results</p>
-        </div>
-    </nav>
+        <img src="image/Frame 168.svg" alt="Logo" class="h-[40px] lg:h-[50px]">
     
-        <div class="h-[820px] w-full ">
-            <div class="w-[1241px] h-[730px] mt-[35px] mb-[55px] ml-[99px] mr-[99px] flex">
-                <div class=" h-[416px] w-[76px]  grid row-span-4">
-                    <img class="h-[80px] w-[76px] mt-[32px] rounded-[10px] bg-[#F9F1E7] " src="image/img1.png" alt="">
-                    <img class="h-[80px] w-[76px] mt-[32px] rounded-[10px] bg-[#F9F1E7] " src="image/img2.png" alt="">
-                    <img class="h-[80px] w-[76px] mt-[32px] rounded-[10px] bg-[#F9F1E7] " src="image/img3.png" alt="">
-                    <img class="h-[80px] w-[76px] mt-[32px] rounded-[10px] bg-[#F9F1E7] " src="image/img4.png" alt="">
+        <ul class="hidden lg:flex space-x-[3.344rem]">
+            <li><a href="home.html" class="cursor-pointer hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="cursor-pointer hover:text-gray-600">Shop</a></li>
+            <li><a href="checkout.html" class="cursor-pointer hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="cursor-pointer hover:text-gray-600">Contact</a></li>
+        </ul>
+        <div class="flex items-center space-x-6">
+            <div>
+                <img src="./icons and logo/user.png" alt="Account" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/search.png" alt="Search" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/heart.svg" alt="Favorites" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/cart.png" alt="Cart" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+        </div>
+    
+        <button class="lg:hidden block text-gray-600" id="menu-toggle">
+            <i class="ri-menu-2-line"></i>
+        </button>
+    
+        <ul class="hidden flex-col space-y-4 mt-4 w-full lg:hidden bg-white py-4 px-6 border-t border-gray-200"
+            id="mobile-menu">
+            <li><a href="home.html" class="block text-gray-800 hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="block text-gray-800 hover:text-gray-600">Shop</a></li>
+            <li><a href="single.html" class="block text-gray-800 hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="block text-gray-800 hover:text-gray-600">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="h-auto bg-[#F9F1E7] grid grid-cols-1 md:grid-cols-4 gap-4 py-4 px-4 md:px-8">
+        
+        <div class="flex flex-wrap items-center justify-center space-x-4 md:space-x-6"> 
+          <img src="icons and logo/Vector.png" alt="Filter Icon" />
+          <h1 class="pl-3 pr-4 text-center md:text-left">Filter</h1>
+          <img src="icons and logo/Vector (1).png" alt="View Icon" class="pr-4" />
+          <img src="icons and logo/bi_view-list.png" alt="Vector Icon" />
+          <span class="h-8 w-px bg-[#9F9F9F] rotate-90 md:rotate-0"></span>
+        </div>
+    
+        
+        <h1 class="text-center md:text-left mt-[.9375rem]">Showing 1-6 of 32 results</h1>
+    
+        
+        <div class="flex items-center justify-center md:justify-start gap-4">
+          <h1>Show</h1>
+          <div class="text-[#9F9F9F] bg-white h-14 w-14 flex items-center justify-center rounded-md">16</div>
+        </div>
+        
+        <div class="flex items-center justify-center md:justify-start gap-4">
+          <h1>Sort by</h1>
+          <div class="text-[#9F9F9F] content-center text-center  bg-white h-14 w-48 rounded-md">Default</div>
+        </div>
+    </section>
+    
+    <div class="h-auto w-full mt-[35px] px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="max-w-[1241px] mx-auto flex flex-col lg:flex-row gap-6">
+          
+            <div class="flex lg:flex-col gap-4">
+                <img class="h-[80px] w-[76px] rounded-lg bg-[#F9F1E7]" src="image/img1.png" alt="">
+                <img class="h-[80px] w-[76px] rounded-lg bg-[#F9F1E7]" src="image/img2.png" alt="">
+                <img class="h-[80px] w-[76px] rounded-lg bg-[#F9F1E7]" src="image/img3.png" alt="">
+                <img class="h-[80px] w-[76px] rounded-lg bg-[#F9F1E7]" src="image/img4.png" alt="">
+            </div>
+    
+            
+            <div class="w-full lg:w-[423px] flex justify-center items-center rounded-lg bg-[#F9F1E7]">
+                <img class="max-h-[500px] max-w-full" src="image/image.png" alt="">
+            </div>
+    
+            
+            <div class="w-full lg:w-[606px]">
+                <h1 class="text-2xl font-medium">Asgaard Sofa</h1>
+                <p class="text-lg text-[#9F9F9F]">Rs. 250,000.00</p>
+    
+                <div class="flex items-center text-[#FFC700] mt-4">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <p class="ml-4 pl-4 border-l border-[#9F9F9F] text-xs text-[#9F9F9F]">5 Customer Review</p>
                 </div>
-                <div class="h-[500px] w-[423px] ml-[31px] mt-[32px] rounded-[10px] bg-[#F9F1E7]">
-                    <img class=" h-[391px] w-[481px] flex items-center justify-center mt-[78px] mb-[31px] "src="image/image.png">
+    
+
+                <p class="mt-4 text-sm text-gray-700">Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+                    stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+                </p>
+    
+
+                <div class="mt-6">
+                    <p class="text-sm text-[#9F9F9F]">Size</p>
+                    <div class="flex gap-4 mt-2">
+                        <button class="h-8 w-8 bg-[#B88E2F] text-white rounded-lg">L</button>
+                        <button class="h-8 w-8 bg-[#F9F1E7] text-black rounded-lg">XL</button>
+                        <button class="h-8 w-8 bg-[#F9F1E7] text-black rounded-lg">XS</button>
+                    </div>
                 </div>
-                <div class="w-[606px] h-[730px] ml-[82px] mt-[35px] mb-[55px]">
-                    <h1 class=" text-2xl font-normal">Asgaard sofa</h1>
-                    <p class="text-[#9F9F9F] text-l">Rs. 250,000.00</p>
-                    <div class="text-[#FFC700] mt-[15px] h-[20px] w-[124px] flex">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                        <div class=" mt-[1px] ml-[18px] border-l-2  border-[#9F9F9F] font-normal text-base pl-[22px] b-[7px]">
-                            <p class="h-[20px] w-[150px]  font-normal text-xs text-[#9f9f9f]  ">5 Customer Review</p>
-                        </div>
+    
+                <div class="mt-6">
+                    <p class="text-sm text-[#9F9F9F]">Color</p>
+                    <div class="flex gap-4 mt-2">
+                        <div class="h-8 w-8 bg-[#816DFA] rounded-full"></div>
+                        <div class="h-8 w-8 bg-[#000000] rounded-full"></div>
+                        <div class="h-8 w-8 bg-[#B88E2F] rounded-full"></div>
                     </div>
-                    <div class="mt-[18px] w-[424px] h-[80px] font-normal text-sm">
-                        <p>Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
-                            stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs
-                            for a sound.
-                        </p>
+                </div>
+    
+                <div class="flex gap-4 mt-6">
+                    <button class="h-16 w-16 rounded-lg border border-[#9F9F9F]">1</button>
+                    <button class="h-16 w-full lg:w-[215px] rounded-lg border border-black text-xl px-6 py-3">Add to Cart</button>
+                </div>
+    
+                <hr class="mt-10 border-gray-300">
+    
+
+                <div class="mt-6 space-y-4">
+                    <div class="flex">
+                        <p>SKU</p>
+                        <p class="ml-4">:</p>
+                        <p class="ml-4">SSOO1</p>
                     </div>
-                    <div class="w-[123px] h-[63px] mt-[22px] rounded-[5px]">
-                        <p class="text-[#9F9F9F] font-normal text-sm">size</p>
-                        <div class="flex">
-                            <button
-                                class="h-[30px] w-[30px] bg-[#B88E2F] text-white rounded-[10px] mt-[16px] ">L</button>
-                            <button
-                                class="h-[30px] w-[30px] bg-[#F9F1E7] text-black rounded-[10px]  mt-[16px] ml-[16px]">XL</button>
-                            <button
-                                class="h-[30px] w-[30px] bg-[#F9F1E7] text-black rounded-[10px] mt-[16px] ml-[16px] ">xs</button>
-                        </div>
+                    <div class="flex">
+                        <p>Category</p>
+                        <p class="ml-4">:</p>
+                        <p class="ml-4">Sofas</p>
                     </div>
-                    <div class="mt-[18px]">
-                        <p class="text-[#9F9F9F] font-normal text-sm pt-[18px]">color</p>
-                        <div class="flex">
-                            <p class="h-[30px] w-[30px] bg-[#816DFA] rounded-full mt-[12px]"></p>
-                            <p class="h-[30px] w-[30px] bg-[#000000] rounded-full ml-[16px] mt-[12px]"></p>
-                            <p class="h-[30px] w-[30px] bg-[#B88E2F] rounded-full ml-[16px] mt-[12px]"></p>
-                        </div>
+                    <div class="flex">
+                        <p>Tags</p>
+                        <p class="ml-4">:</p>
+                        <p class="ml-4">Sofa, Chair, Home, Shop</p>
                     </div>
-                    <div class="flex mt-[32px]">
-                        <button class="h-[64px] w-[123px] rounded-[10px] border-[#9F9F9F] border-[1px]">1</button>
-                        <button class="h-[64px] w-[215px] rounded-[15px] border-[#000000] border-[1px] ml-[18px] font-normal  text-xl py-[17px] px-[48px]"> Add to cart</button>
-                    </div>
-                    <hr class="mt-[60px] w-[605px] border">
-                    <div class="mt-[41px]">
-                        <div class="flex">
-                            <p >SKU</p>
-                            <p class="ml-[52px]">:</p>
-                            <p class="ml-[12px]">SSOO1</p>
-                        </div>
-                        <div class="flex mt-[12px]">
-                            <p>Category</p>
-                            <p class="ml-[16px]">:</p>
-                            <p class="ml-[12px]">Sofas</p>
-                        </div>
-                        <div class="flex mt-[12px]">
-                            <p>Tags</p>
-                            <p class="ml-[52px]">:</p>
-                            <p class="ml-[12px]">Sofa, Chair, Home, Shop</p>
-                        </div>
-                        <div class="flex mt-[14px]">
-                            <p>Share</p>
-                            <p class="ml-[44px]">:</p>
-                            <p class="ml-[12px] mt-[0.2133rem]">
-                                <i class='bx bxl-facebook-circle h-[20px] w-[20px]'></i>
-                                <i class='bx bxl-linkedin-square h-[20px] w-[20px] ml-[25px]' ></i>
-                                <i class='bx bxl-twitter h-[25px] w-[25px] ml-[23px]' ></i>
-                            </p>
+                    <div class="flex items-center">
+                        <p>Share</p>
+                        <p class="ml-4">:</p>
+                        <div class="ml-4 flex gap-4">
+                            <i class='bx bxl-facebook-circle text-lg'></i>
+                            <i class='bx bxl-linkedin-square text-lg'></i>
+                            <i class='bx bxl-twitter text-lg'></i>
                         </div>
                     </div>
                 </div>
             </div>
-   </div>
-    </div>
-    <div class="w-[1440px] h-[770px] mt-[11px] bg-[#FFFFFF]">
-        <div class="flex mt-[48px] ml-[100px]  justify-center ">
-            <p class="text-[#000000] font-medium text-[24px]">Description</p>
-            <p class="ml-[52px] text-[#9F9F9F] font-normal text-[24px]">Additional Information</p>
-            <p class="ml-[53px] text-[#9F9F9F] font-normal text-[24px]">Reviews [5]</p>
         </div>
-        <div class=" ml-[207px] mr-[207px] mt-[37px] h-[174px]  w-[1026px] justify-center items-center">
-            <p class="text-16px font-normal text-[#9F9F9F]">
+    </div>
+    <div class="w-full h-auto mt-3 bg-white px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="flex flex-col lg:flex-row mt-12 justify-center gap-6 lg:gap-10">
+            <p class="text-black font-medium text-lg sm:text-xl lg:text-2xl text-center">Description</p>
+            <p class="text-gray-400 font-normal text-lg sm:text-xl lg:text-2xl text-center">Additional Information</p>
+            <p class="text-gray-400 font-normal text-lg sm:text-xl lg:text-2xl text-center">Reviews [5]</p>
+        </div>
+    
+        <div class="mt-8 mx-auto max-w-4xl text-center">
+            <p class="text-sm sm:text-base lg:text-lg font-normal text-gray-500 leading-relaxed">
                 Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the
                 unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
             </p>
             <br>
-            <p class="text-16px font-normal text-[#9F9F9F]">
+            <p class="text-sm sm:text-base lg:text-lg font-normal text-gray-500 leading-relaxed">
                 Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting
                 the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a
                 well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate
@@ -150,70 +187,168 @@
                 while the guitar-influenced leather strap enables easy and stylish travel.
             </p>
         </div>
-        <div class="flex justify-center mt-[36px] ml-[101px]">
-            <img src="image/Group 107.png">
-            <img class="ml-[29px]" src="image/Group 106.png">
+    
+        <div class="flex flex-col sm:flex-row justify-center mt-9 gap-4 sm:gap-7">
+            <img class="w-full sm:w-[50%]" src="image/Group 107.png" alt="Group 107">
+            <img class="w-full sm:w-[50%]" src="image/Group 106.png" alt="Group 106">
         </div>
     </div>
-    <div class="w-[1440px] h-[777px] ">
-        <p class="text-[#000000] text-4xl font-medium mt-[55px]  ml-[565px] mr-[565px]">
+    
+    <div class="w-full h-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <p class="text-[#000000] text-2xl sm:text-3xl lg:text-4xl font-medium mt-14 text-center">
             Related Product
         </p>
-        <div class=" flex  mt-[2.875rem] ml-[6.1875rem] mr-[6.525rem] ">
-            <div class="mx-[2rem] w-[17.81rem] h-[27.875] relative">
-                <img src="./image/1.png">
-                <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[1.25rem]">
-                    <b class="mt-[1rem]">Syltherine</b>
-                    <p class="mt-[0.5rem]">Stylish cafe chair</p>
-                    <p class="mt-[0.5rem]">Rp2.500.000
-                        <s>3.500.000</s>
+        <div class="flex flex-wrap justify-center gap-6 mt-12 px-4 lg:px-16">
+
+            <div class="w-full sm:w-[17.81rem] h-auto relative group">
+                <img src="./image/1.png" alt="Syltherine Chair" class="w-full h-auto">
+                <div class="bg-[#F4F5F7] p-4">
+                    <b class="block text-lg lg:text-xl mt-2">Syltherine</b>
+                    <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                    <p class="text-sm lg:text-base mt-2">
+                        Rp2.500.000 <s class="text-gray-500">3.500.000</s>
                     </p>
                 </div>
                 <div
-                    class=" bg-red-400 h-12 w-12  rounded-full text-white font-[500px] flex items-center justify-center absolute top-6 right-6">
-                    -30%</div>
-            </div>
-            <div class="mx-[2rem] w-[17.81rem] h-[27.875]">
-                <img src="image/Images (5).png">
-                <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                    <b class="mt-[1rem]">leviosa</b>
-                    <p class="mt-[0.5rem]">stylish cafe chair</p>
-                    <p class="mt-[0.5rem]">Rp2.500.000</p>
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
                 </div>
             </div>
-            <div class="mx-[2rem] w-[17.81rem] h-[27.875] relative">
-                <img src="image/./image 3.png">
-                <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[0.9375rem]">
-                    <b class="mt-[1rem]">lolito</b>
-                    <p class="mt-[0.5rem]"> luxury big sofa</p>
-                    <p class="mt-[0.5rem]">7.000.000 <s>14.000.000</s></p>
+                
+                <div
+                    class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                    -30%
+                </div>
+            </div>
+    
+            <div class="w-full sm:w-[17.81rem] h-auto relative group">
+                <img src="image/Images (5).png" alt="Leviosa Chair" class="w-full h-auto">
+                <div class="bg-[#F4F5F7] p-4">
+                    <b class="block text-lg lg:text-xl mt-2">Leviosa</b>
+                    <p class="text-sm lg:text-base mt-2">Stylish cafe chair</p>
+                    <p class="text-sm lg:text-base mt-2">Rp2.500.000</p>
                 </div>
                 <div
-                    class=" bg-red-400 h-12 w-12  rounded-full text-white font-[500px] flex items-center justify-center absolute top-6 right-6">
-                    -30%</div>
+                    class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                    <button
+                        class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                        Add to Cart
+                    </button>
+                    <div class="flex justify-around mt-6 w-full px-6">
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mx-[2rem] w-[17.81rem] h-[27.875] relative">
-                <img src="image/./image 4.png">
-                <div class="w-[17.81rem] h-[9.06rem] bg-[#F4F5F7] pl-[1rem] pt-[1rem] pb-[1.875rem] pr-[2.8125rem]">
-                    <b class="mt-[1rem] text-[1.5rem] font-semibold">Respiro</b>
-                    <p class="mt-[0.5rem]">outdoor bar table and stool</p>
-                    <p class="mt-[0.5rem]">R500.000p</p>
+    
+            <div class="w-full sm:w-[17.81rem] h-auto relative group">
+                <img src="image/./image 3.png" alt="Lolito Sofa" class="w-full h-auto">
+                <div class="bg-[#F4F5F7] p-4">
+                    <b class="block text-lg lg:text-xl mt-2">Lolito</b>
+                    <p class="text-sm lg:text-base mt-2">Luxury big sofa</p>
+                    <p class="text-sm lg:text-base mt-2">
+                        Rp7.000.000 <s class="text-gray-500">14.000.000</s>
+                    </p>
                 </div>
                 <div
-                    class=" bg-[#2EC1AC] h-12 w-12  rounded-full text-white font-[500px] flex items-center justify-center absolute top-6 right-6">
-                    New</div>
+                class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                <button
+                    class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                    Add to Cart
+                </button>
+                <div class="flex justify-around mt-6 w-full px-6">
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                        <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                    </div>
+                </div>
+            </div>
+                <div
+                    class="bg-red-400 h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                    -30%
+                </div>
+            </div>
+            <div class="w-full sm:w-[17.81rem] h-auto relative group">
+                <img src="image/image 4.png" alt="Respiro Table" class="w-full h-auto">
+                <div class="bg-[#F4F5F7] p-4">
+                    <b class="block text-lg lg:text-xl mt-2 font-semibold">Respiro</b>
+                    <p class="text-sm lg:text-base mt-2">Outdoor bar table and stool</p>
+                    <p class="text-sm lg:text-base mt-2">Rp500.000</p>
+                </div>
+                <div
+                    class="opacity-0 group-hover:opacity-100 bg-[rgba(58,58,58,0.5)] absolute inset-0 flex flex-col justify-center items-center">
+                    <button
+                        class="w-[202px] h-[48px] bg-white text-[#B88E2F] font-semibold text-base rounded shadow-md hover:shadow-lg">
+                        Add to Cart
+                    </button>
+                    <div class="flex justify-around mt-6 w-full px-6">
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/gridicons_share.png" alt="Share Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Compare</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/compare-svgrepo-com 1.png" alt="Group Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Share</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="h-4 w-4" src="icons and logo/heart.png" alt="Like Icon">
+                            <span class="ml-2 text-white text-sm lg:text-base font-medium">Like</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#2EC1AC] h-12 w-12 rounded-full text-white font-medium flex items-center justify-center absolute top-4 right-4">
+                    New
+                </div>
             </div>
         </div>
-        <div class="flex justify-center mt-[2.75rem] mb-[6.225rem] mr-[37.31rem] ml-[37.37rem]">
-            <button
-                class="mt-11 py-6 pt-[0.75rem] pb-[0.75rem] pl-[5.125rem] pr-[4.625rem] border-[0.0625rem] border-[#B88E2F] bg-[#FFFFFF] text-[#B88E2F] font-bold">show
-                more</button>
+        </div>
+
+        
+        <div class="flex justify-center mt-12 mb-16">
+            <button class="py-3 px-10 border border-[#B88E2F] bg-white text-[#B88E2F] font-bold">
+                Show More
+            </button>
         </div>
     </div>
     <footer class="mt-12 w-full bg-white">
         <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-wrap gap-y-8">
             
-            <div class="w-full sm:w-[48%] lg:w-[33%]">
+            <div class=" sm:w-[48%] lg:w-[33%]">
                 <h1 class="font-bold text-lg md:text-xl mb-4">Funiro.</h1>
                 <p class="text-sm md:text-base text-[#9F9F9F]">
                     400 University Drive Suite 200<br />
@@ -266,5 +401,13 @@
         </p>
     </footer>
 </body>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 </html>

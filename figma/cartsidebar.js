@@ -11,4 +11,11 @@ function submitValue(){
 function closePopUp (){
     const popup = document.getElementById ("contact-popup")
     popup.setAttribute("class","bg-[#00000050] absolute left-0 right-0 bottom-0 top-0 hidden")
-}
+};
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});

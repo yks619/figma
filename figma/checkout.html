@@ -7,35 +7,50 @@
     <title>Checkout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="figma.css">
 
 </head>
 
 <body>
-    <header class=" flex items-center justify-between md:py-[1.875rem] md:px-[3.375rem] px-[1rem] ">
-        <div>
-            <img class="item text-center justify-center h-[4rem] w-[6rem] md:w-[9.875rem] md:h-[2.56rem]" src="image/Frame 168.svg"  alt="">
-        </div>
-        <div>
+    <header class="flex flex-wrap items-center justify-between py-6 px-6 lg:py-[1.875rem] lg:px-[3.375rem] bg-white fixed t-0 l-0 w-full overflow-hidden z-50">
 
-            <ul class="md:flex hidden">
-                <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="home.html"
-                    class="cursor-pointer">Home</a></li>
-                    <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="shop.html"
-                        class="cursor-pointer">Shop</a></li>
-                        <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="cart.html"
-                            class="cursor-pointer">About</a></li>
-                            <li class="px-[2.34rem] text-base font-medium text-[#000000]"><a href="contact.html"
-                                class="cursor-pointer">Contact</a></li>
-                            </div>
+        <img src="image/Frame 168.svg" alt="Logo" class="h-[40px] lg:h-[50px]">
+    
+        <ul class="hidden lg:flex space-x-[3.344rem]">
+            <li><a href="home.html" class="cursor-pointer hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="cursor-pointer hover:text-gray-600">Shop</a></li>
+            <li><a href="checkout.html" class="cursor-pointer hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="cursor-pointer hover:text-gray-600">Contact</a></li>
         </ul>
-        <div class="flex gap-2 md:gap-[1.40rem]">
-            <div class=""> <img src="icons and logo/user.png" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/search.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/heart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
-            <div class=""> <img src="icons and logo/cart.svg" alt="" class="h-[1.75rem] w-[1.75rem]"> </div>
+        <div class="flex items-center space-x-6">
+            <div>
+                <img src="./icons and logo/user.png" alt="Account" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/search.png" alt="Search" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/heart.svg" alt="Favorites" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
+            <div>
+                <img src="./icons and logo/cart.png" alt="Cart" class="h-5 w-5 lg:h-6 lg:w-6">
+            </div>
         </div>
+    
+        <button class="lg:hidden block text-gray-600" id="menu-toggle">
+            <i class="ri-menu-2-line"></i>
+        </button>
+    
+        <ul class="hidden flex-col space-y-4 mt-4 w-full lg:hidden bg-white py-4 px-6 border-t border-gray-200"
+            id="mobile-menu">
+            <li><a href="home.html" class="block text-gray-800 hover:text-gray-600">Home</a></li>
+            <li><a href="shop.html" class="block text-gray-800 hover:text-gray-600">Shop</a></li>
+            <li><a href="single.html" class="block text-gray-800 hover:text-gray-600">About</a></li>
+            <li><a href="contact.html" class="block text-gray-800 hover:text-gray-600">Contact</a></li>
+        </ul>
     </header>
+    
     <section class="  h-[19.75rem] bg-cover bg-[url('image/sa.png')]">
         <h1 class="text-[#000000] font-bold text-5xl  flex justify-center items-center pt-[121px] mx[658px]">Checkout</h1>
         <p class="text-base mt-[2px] text-[#000000] flex justify-center items-center">home <i
@@ -193,5 +208,13 @@
         </p>
     </footer>
 </body>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 </html>
